@@ -1,0 +1,42 @@
+# Requirements for RTX 5090 (Blackwell, sm_120) on WSL2.
+#
+# IMPORTANT: do NOT `pip install -r requirements.txt` (the original) on a 5090 —
+# it pins torch 2.4.1+cu121, which has NO Blackwell kernels and will fail with
+# "no kernel image is available for execution on the device".
+#
+# Install torch SEPARATELY from the cu128 index first (see setup_5090.sh), then
+# install this file. torch/torchvision are intentionally omitted here so pip does
+# not pull the wrong CUDA build.
+
+# --- core (torch installed separately via cu128 index) ---
+transformers
+accelerate
+datasets==2.21.0
+tokenizers
+safetensors
+peft
+
+# --- numerics / data ---
+numpy
+pandas==2.2.3
+scikit-learn>=1.0.0
+scipy
+
+# --- config / utils ---
+absl_py==2.1.0
+gin_config==0.5.0
+PyYAML==6.0.2
+tqdm==4.67.1
+gluonts
+reformer_pytorch==1.4.4
+nvidia-ml-py
+
+# --- plotting (optional for the multi-seed run; keep if you want plots) ---
+matplotlib==3.10.0
+seaborn
+plotly>=6.1.1
+
+# --- NOT included (only needed by tests / unused by the multi-seed run path) ---
+# deepspeed==0.16.2          # imported only by scripts/tests/system_test.py
+# autogluon.timeseries       # heavy, unused by distillation
+# kaleido / nbformat / ipykernel  # notebook/plot-export only

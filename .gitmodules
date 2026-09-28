@@ -1,0 +1,7 @@
+[submodule "models/chronos"]
+	path = models/chronos
+	url = https://github.com/ammahmoudi/chronos-forecasting.git
+[submodule "fairness_article"]
+	path = fairness_article
+	url = https://github.com/ammahmoudi/fairness_article.git
+	branch = main

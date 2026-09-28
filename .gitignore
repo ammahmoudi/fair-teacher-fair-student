@@ -1,0 +1,124 @@
+# Python
+venv
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Local AI research integrations and generated research artifacts
+.research-tools/
+.research-data/
+.pipeline/
+.claude/settings.local.json
+graphify-out/
+.env
+.env.*
+
+# Logs and outputs
+logs/
+*.log
+grid_logs/
+
+# Data directories
+data/
+data_old/
+raw/
+formated/
+formatted/
+missing_values/
+missing_values_formatted/
+noisy/
+noisy_formatted/
+standardized/
+standardized_arrow/
+missing_data_periodic/
+missing_data_periodic_formatted/
+missing_data_random/
+missing_data_random_formatted/
+d1namo_raw/
+d1namo_formatted/
+d1namo_noisy/
+d1namo_standardized/
+d1namo_missing_data_periodic/
+d1namo_missing_data_random/
+
+# Experiment configs and results
+experiment_configs/
+experiment_configs_old/
+experiment_configs_distil/
+experiment_configs_distil_x/
+experiment_configs_time_llm_training/
+experiment_configs_time_llm_inference/
+d1namo_experiment_configs_time_llm_inference/
+d1namo_experiment_configs_time_llm_training/
+experiment_d1namo_configs_chronos_inference/
+experiment_d1namo_configs_chronos_training/
+experiment_d1namo_configs_chronos_training_inference/
+distillation/configs/
+experiments/
+flexible/
+
+# Results and analysis
+results/
+experiment_results.csv
+*.csv
+distillation_experiments/
+distillation_experiments_1/
+distillation_pairs_comparison/
+analysis_results/
+minilm_distil_experiments/
+efficiency_test_results/
+efficiency_toolkit/results/efficiency_analysis_results/
+/teacher_student_multiseed/
+
+# Model artifacts
+*.pth
+*.pkl
+*.bin
+*.pt
+*.safetensors
+AutogluonModels/
+checkpoints/
+saved_models/
+
+# Documentation artifacts
+*.tex
+*.aux
+*.out
+*.pdf
+*.synctex.gz
+
+# Notebooks
+notebooks/outputs/*
+.ipynb_checkpoints/
+
+# Misc
+*:Zone.Identifier
+vx/
+*.zip
+scripts/clinical_metrics/fonts/uhv*.ttf
